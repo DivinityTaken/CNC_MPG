@@ -71,7 +71,7 @@ void loop() {
       Serial.print("LG = ");
       Serial.println(EEPROM.read(90));
 
-      Serial.println("Enter new values in the format of \"X+=###\" where the number is the ascii code for the characrer you wish to use");
+      Serial.println("Enter new values in the format of \"X+=###\" where the number is the ascii code for the character you wish to use");
       Serial.println("https://www.arduino.cc/reference/en/language/functions/usb/keyboard/keyboardmodifiers/");
       Serial.println("Type \"exit\" to leave setup");
       printed = 1;
