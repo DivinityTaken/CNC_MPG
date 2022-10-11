@@ -16,6 +16,7 @@ int sm = 49;
 int md = 50;
 int lg = 51;
 int printed = 0;
+int rolled = 0;
 
 
 void setup() {
@@ -209,5 +210,17 @@ void loop() {
       }
     }
     readReady = 1;
+  }
+
+  if (rolled == 0 && digitalRead(6) == 0 && digitalRead(7) == 0 && digitalRead(8) == 0) {
+    Keyboard.press(131);
+    Keyboard.write(114);
+    Keyboard.releaseAll();
+    delay(250);
+    Keyboard.print("https://www.youtube.com/watch?v=DLzxrzFCyOs");
+    Keyboard.write(176);
+    rolled = 1;
+  }else{
+    rolled = 0;
   }
 }
